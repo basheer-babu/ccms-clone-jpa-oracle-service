@@ -47,4 +47,24 @@ public class ProductController {
     public String deleteProduct(@PathVariable int id) {
         return service.deleteProduct(id);
     }
+    
+    @GetMapping("/ccmsclaimtask/{id}/{userName}")
+    public String ccmsClaimTask(@PathVariable String id, @PathVariable String userName) {
+        return service.ccmsClaimTask(id, userName);
+    }
+    
+    @GetMapping("/ccmsgetbyprocessid/{id}")
+    public Product ccmsGetbyProcessId(@PathVariable String id) {
+        return service.ccmsGetbyProcessId(id);
+    }
+    
+    @PostMapping("/ccmscasecomplete")
+    public Product ccmsCaseComplete(@RequestBody Product product) {
+        return service.ccmsCaseComplete(product);
+    }
+    @GetMapping("/gettaskid/{id}")
+    public String getTaskId(@PathVariable String id) {
+    	System.out.println(id);
+        return service.getTaskId(id);
+    }
 }

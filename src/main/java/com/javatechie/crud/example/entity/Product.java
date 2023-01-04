@@ -27,6 +27,9 @@ public class Product {
     private String maker_name;
     private String checker_name;
     private String defendant_type;
+    
+    private String processId;
+    private String definition_Id;
 	public int getId() {
 		return id;
 	}
@@ -81,13 +84,29 @@ public class Product {
 	public void setDefendant_type(String defendant_type) {
 		this.defendant_type = defendant_type;
 	}
+	
+	public String getDefinition_Id() {
+		return definition_Id;
+	}
+	public void setDefinition_Id(String definition_Id) {
+		this.definition_Id = definition_Id;
+	}
+	public String getProcessId() {
+		return processId;
+	}
+	public void setProcessId(String processId) {
+		this.processId = processId;
+	}
 	@Override
 	public String toString() {
 		return "Product [id=" + id + ", case_ref_no=" + case_ref_no + ", court_order_id=" + court_order_id
 				+ ", request_type=" + request_type + ", court_name=" + court_name + ", court_order_date="
 				+ court_order_date + ", maker_name=" + maker_name + ", checker_name=" + checker_name
-				+ ", defendant_type=" + defendant_type + "]";
+				+ ", defendant_type=" + defendant_type + ", processId=" + processId + ", definition_Id=" + definition_Id
+				+ "]";
 	}
+	
     
+	
     
 }
